@@ -1,7 +1,4 @@
-<?php 
-
-
-
+<?php
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
@@ -9,6 +6,19 @@ define('DB_NAME', 'mvc');
 define('DB_PORT', '3306');
 define('DB_CHARSET', 'utf8');
 define('DB_PREFIX', 'diji_');
+
+
+// Session Names
+define('SESSION_PREFIX', 'diji_');
+define('LOGIN_ADMIN', SESSION_PREFIX . 'admin_login');
+define('LOGIN_USER', SESSION_PREFIX . 'user_login');
+define('LOGIN_TOKEN_ADMIN', SESSION_PREFIX . 'login_token_admin');
+define('LOGIN_TOKEN_USER', SESSION_PREFIX . 'login_token_user');
+define('LOGIN_TOKEN_TIME_ADMIN', SESSION_PREFIX . 'login_token_time_admin');
+define('LOGIN_TOKEN_TIME_USER', SESSION_PREFIX . 'login_token_time_user');
+define('LOGIN_TOKEN_TIME_ADMIN_LIMIT', 3600);
+define('LOGIN_TOKEN_TIME_USER_LIMIT', 3600);
+
 
 define('CONTROLLER_PATH', 'app/controllers/');
 define('MODEL_PATH', 'app/models/');

@@ -5,5 +5,7 @@ class main extends Controller
     {
         $this->view('themes/main/index');
         $this->log->createLog();
+        print_r($this->security::getLang());
+        $this->mail;
     }
 }

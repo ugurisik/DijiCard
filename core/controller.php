@@ -1,13 +1,22 @@
 <?php
+
 use App\helpers\logs\logManager as logManager;
+use App\helpers\session\sessionManager as sessionManager;
+use App\helpers\security\securityManager as security;
+use App\helpers\mail\phpMail as phpMail;
 
 class Controller
 {
     public $log;
+    public $session;
+    public $security;
+    public $mail;
     public function __construct()
     {
         $this->log = new logManager;
-       
+        $this->session = new sessionManager;
+        $this->security = new security;
+        $this->mail = new phpMail;
     }
 
     public function view($file, $params = [])

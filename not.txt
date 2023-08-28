@@ -1,0 +1,5 @@
+UNUTULMAYACAKLAR LİSTESİ !!!!!!
+
+
+
+Login olunduğunda SESSIONA o ana ait zamanı ekle ve isLogged fonksiyonunda bu zamanı kontrol et. 60 dakikadan uzun bir süre oturum açıksa oturumu kapat. (YAPILDI -- kontrol edilmesi gerekiyor login işleminden sonra)
