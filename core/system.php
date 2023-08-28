@@ -1,5 +1,4 @@
 <?php
-
 class System
 {
 
@@ -14,6 +13,8 @@ class System
         $url = $this->checkClass($url);
         $url = $this->checkMethod($url);
         $this->params = $this->clearUrl($url);
+
+
         call_user_func_array([$this->controller, $this->method], $this->params);
     }
 

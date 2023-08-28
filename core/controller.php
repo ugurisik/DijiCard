@@ -1,10 +1,13 @@
 <?php
+use App\helpers\logs\logManager as logManager;
 
 class Controller
 {
+    public $log;
     public function __construct()
     {
-        echo 'Controller is working';
+        $this->log = new logManager;
+       
     }
 
     public function view($file, $params = [])

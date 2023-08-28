@@ -11,5 +11,6 @@ require_once 'init.php';
 try {
     $system = new System();
 } catch (\Throwable $th) {
-    //throw $th;
+    header("HTTP/1.0 500 Internal Server Error");
+    exit($th->getMessage());
 }
