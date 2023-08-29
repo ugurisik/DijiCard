@@ -1,7 +1,6 @@
 <?php
 class System
 {
-
     protected $controller = 'main';
     protected $method = 'index';
     protected $params = [];
@@ -13,8 +12,6 @@ class System
         $url = $this->checkClass($url);
         $url = $this->checkMethod($url);
         $this->params = $this->clearUrl($url);
-
-
         call_user_func_array([$this->controller, $this->method], $this->params);
     }
 
@@ -62,9 +59,9 @@ class System
 
     public function clearUrl($url = [])
     {
-        if ($url[0] == 'main' && $url[1] == 'index') {
-            unset($url[0]);
-            unset($url[1]);
+        if ($url[0] == $this->controller && $url[1] == $this->method) {
+            array_shift($url);
+            array_shift($url);
         }
         return $url;
     }

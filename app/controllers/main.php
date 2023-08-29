@@ -7,5 +7,9 @@ class main extends Controller
         $this->log->createLog();
         print_r($this->security::getLang());
         $this->mail;
+        $this->mailFunction;
+    }
+    public function test(){
+        echo 'test';
     }
 }

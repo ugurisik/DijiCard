@@ -4,6 +4,7 @@ use App\helpers\logs\logManager as logManager;
 use App\helpers\session\sessionManager as sessionManager;
 use App\helpers\security\securityManager as security;
 use App\helpers\mail\phpMail as phpMail;
+use App\helpers\functions\mailFunction as mailFunction;
 
 class Controller
 {
@@ -11,12 +12,14 @@ class Controller
     public $session;
     public $security;
     public $mail;
+    public $mailFunction;
     public function __construct()
     {
         $this->log = new logManager;
         $this->session = new sessionManager;
         $this->security = new security;
         $this->mail = new phpMail;
+        $this->mailFunction = new mailFunction;
     }
 
     public function view($file, $params = [])
