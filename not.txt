@@ -5,3 +5,6 @@ UNUTULMAYACAKLAR LİSTESİ !!!!!!
 Login olunduğunda SESSIONA o ana ait zamanı ekle ve isLogged fonksiyonunda bu zamanı kontrol et. 60 dakikadan uzun bir süre oturum açıksa oturumu kapat. (YAPILDI -- kontrol edilmesi gerekiyor login işleminden sonra)
 
 Hata durumları için ErrorCallback yapısı oluşturmalıyım. 404 500 400 vs durum kodları oluşturan durumlarda buna yönlendirip kullanıcıya öyle sunmalıyız. SEO'ya da etkili.
+
+
+profile-socialmedia.php Piyasada bulunan tüm sosyal medya, iş vs gibi platformların eklenmesi gerekiyor. Behance, r10, onlyfans, wp vb

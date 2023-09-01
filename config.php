@@ -1,9 +1,9 @@
 <?php
 define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'mvc');
-define('DB_PORT', '3306');
+define('DB_USER', 'ugur');
+define('DB_PASS', 'K3dk9sz3.!*');
+define('DB_NAME', 'dijicard2');
+define('DB_PORT', '8889');
 define('DB_CHARSET', 'utf8');
 define('DB_PREFIX', 'diji_');
 

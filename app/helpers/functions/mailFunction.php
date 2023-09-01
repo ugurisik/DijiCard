@@ -8,6 +8,6 @@ class mailFunction extends Model
 {
     public function __construct()
     {
-        echo 'mailFunction';
+        // echo 'mailFunction';
     }
 }

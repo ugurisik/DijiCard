@@ -5,6 +5,7 @@ use App\helpers\session\sessionManager as sessionManager;
 use App\helpers\security\securityManager as security;
 use App\helpers\mail\phpMail as phpMail;
 use App\helpers\functions\mailFunction as mailFunction;
+use App\helpers\errors\error as error;
 
 class Controller
 {
@@ -13,6 +14,7 @@ class Controller
     public $security;
     public $mail;
     public $mailFunction;
+    public $error;
     public function __construct()
     {
         $this->log = new logManager;
@@ -20,6 +22,7 @@ class Controller
         $this->security = new security;
         $this->mail = new phpMail;
         $this->mailFunction = new mailFunction;
+        $this->error = new error;        
     }
 
     public function view($file, $params = [])
