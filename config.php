@@ -24,3 +24,8 @@ define('CONTROLLER_PATH', 'app/controllers/');
 define('MODEL_PATH', 'app/models/');
 define('VIEW_PATH', 'app/views/');
 define('HELPER_PATH', 'app/helpers/');
+define('MIDDLEWARE_PATH', 'app/middleware/');
+define('THEME_PATH', VIEW_PATH . 'themes/');
+
+
+define("SITE_URL", (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]/" . basename(dirname(__FILE__)));

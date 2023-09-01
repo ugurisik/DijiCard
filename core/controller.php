@@ -22,13 +22,21 @@ class Controller
         $this->security = new security;
         $this->mail = new phpMail;
         $this->mailFunction = new mailFunction;
-        $this->error = new error;        
+        $this->error = new error;
     }
 
-    public function view($file, $params = [])
+    public function view($theme, $file, $params = [])
     {
-        if (file_exists(VIEW_PATH . $file . '.php')) {
-            require_once VIEW_PATH . $file . '.php';
+        $theme = 'themes/' . $theme;
+        if (file_exists(VIEW_PATH . $theme . '/index.php')) {
+            require_once VIEW_PATH . $theme . '/inc/header.php';
+            if (file_exists(VIEW_PATH . $theme . '/' . $file . '.php')) {
+                require_once VIEW_PATH . $theme . '/' . $file . '.php';
+            } else {
+                header("HTTP/1.0 404 Not Found");
+                exit('404 Not Found');
+            }
+            require_once VIEW_PATH . $theme . '/inc/footer.php';
         } else {
             header("HTTP/1.0 404 Not Found");
             exit('404 Not Found');

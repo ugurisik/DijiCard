@@ -20,10 +20,10 @@ class main extends Controller
         echo '<pre>';
         print_r($params);
         echo '</pre>';
-        $this->view('themes/main/index');
-        $this->log->createLog();
-        print_r($this->security::getLang());
-        $this->mailFunction;
+        $this->view('main','index');
+        // $this->log->createLog();
+        // print_r($this->security::getLang());
+        // $this->mailFunction;
     }
     public function test()
     {
