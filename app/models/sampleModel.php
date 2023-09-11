@@ -13,6 +13,13 @@ class sampleModel extends Model
         }
         return $this->db->get($table);
     }
+    public function getDataOrWhere($table = 'sample', $whereParams = [])
+    {
+        foreach ($whereParams as $key => $value) {
+            $this->db->orWhere($key, $value);
+        }
+        return $this->db->get($table);
+    }
     public function getOneData($table = 'sample', $whereParams = [])
     {
         foreach ($whereParams as $key => $value) {

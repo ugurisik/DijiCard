@@ -29,3 +29,6 @@ define('THEME_PATH', VIEW_PATH . 'themes/');
 
 
 define("SITE_URL", (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]/" . basename(dirname(__FILE__)));
+
+
+define('USERGUID', '0XC0D3');

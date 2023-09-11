@@ -38,6 +38,8 @@
     <link href="<?= SITE_URL . '/' . THEME_PATH . 'admin/assets' ?>/css/app.min.css" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="<?= SITE_URL . '/' . THEME_PATH . 'admin/assets' ?>/css/custom.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 
@@ -80,112 +82,10 @@
                             </span>
                         </button>
 
-                        <!-- App Search-->
-                        <form class="app-search d-none d-md-block">
-                            <div class="position-relative">
-                                <input type="text" class="form-control" placeholder="Arama..." autocomplete="off" id="search-options" value="">
-                                <span class="mdi mdi-magnify search-widget-icon"></span>
-                                <span class="mdi mdi-close-circle search-widget-icon search-widget-icon-close d-none" id="search-close-options"></span>
-                            </div>
-                            <div class="dropdown-menu dropdown-menu-lg" id="search-dropdown">
-                                <div data-simplebar style="max-height: 320px;">
-                                    <!-- item-->
-                                    <div class="dropdown-header">
-                                        <h6 class="text-overflow text-muted mb-0 text-uppercase">Recent Searches</h6>
-                                    </div>
-
-                                    <div class="dropdown-item bg-transparent text-wrap">
-                                        <a href="index.html" class="btn btn-soft-primary btn-sm btn-rounded">how to
-                                            setup <i class="mdi mdi-magnify ms-1"></i></a>
-                                        <a href="index.html" class="btn btn-soft-primary btn-sm btn-rounded">buttons <i class="mdi mdi-magnify ms-1"></i></a>
-                                    </div>
-                                    <!-- item-->
-                                    <div class="dropdown-header mt-2">
-                                        <h6 class="text-overflow text-muted mb-1 text-uppercase">Pages</h6>
-                                    </div>
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <i class="ri-bubble-chart-line align-middle fs-18 text-muted me-2"></i>
-                                        <span>Analytics Dashboard</span>
-                                    </a>
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <i class="ri-lifebuoy-line align-middle fs-18 text-muted me-2"></i>
-                                        <span>Help Center</span>
-                                    </a>
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <i class="ri-user-settings-line align-middle fs-18 text-muted me-2"></i>
-                                        <span>My account settings</span>
-                                    </a>
-
-                                    <!-- item-->
-                                    <div class="dropdown-header mt-2">
-                                        <h6 class="text-overflow text-muted mb-2 text-uppercase">Members</h6>
-                                    </div>
-
-                                    <div class="notification-list">
-                                        <!-- item -->
-                                        <a href="javascript:void(0);" class="dropdown-item notify-item py-2">
-                                            <div class="d-flex">
-                                                <img src="<?= SITE_URL . '/' . THEME_PATH . 'admin/assets' ?>/images/users/avatar-2.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
-                                                <div class="flex-1">
-                                                    <h6 class="m-0">Angela Bernier</h6>
-                                                    <span class="fs-11 mb-0 text-muted">Manager</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <!-- item -->
-                                        <a href="javascript:void(0);" class="dropdown-item notify-item py-2">
-                                            <div class="d-flex">
-                                                <img src="<?= SITE_URL . '/' . THEME_PATH . 'admin/assets' ?>/images/users/avatar-3.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
-                                                <div class="flex-1">
-                                                    <h6 class="m-0">David Grasso</h6>
-                                                    <span class="fs-11 mb-0 text-muted">Web Designer</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <!-- item -->
-                                        <a href="javascript:void(0);" class="dropdown-item notify-item py-2">
-                                            <div class="d-flex">
-                                                <img src="<?= SITE_URL . '/' . THEME_PATH . 'admin/assets' ?>/images/users/avatar-5.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
-                                                <div class="flex-1">
-                                                    <h6 class="m-0">Mike Bunch</h6>
-                                                    <span class="fs-11 mb-0 text-muted">React Developer</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="text-center pt-3 pb-1">
-                                    <a href="pages-search-results.html" class="btn btn-primary btn-sm">View All Results
-                                        <i class="ri-arrow-right-line ms-1"></i></a>
-                                </div>
-                            </div>
-                        </form>
                     </div>
 
                     <div class="d-flex align-items-center">
 
-                        <div class="dropdown d-md-none topbar-head-dropdown header-item">
-                            <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle" id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="bx bx-search fs-22"></i>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-search-dropdown">
-                                <form class="p-3">
-                                    <div class="form-group m-0">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
-                                            <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
 
 
                         <div class="ms-1 header-item d-none d-sm-flex">
@@ -208,7 +108,7 @@
                             </button>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <!-- item-->
-                                <h6 class="dropdown-header">Welcome Anna!</h6>
+                                <h6 class="dropdown-header">Hoşgeldin UĞUR!</h6>
                                 <a class="dropdown-item" href="pages-profile.html"><i class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Profile</span></a>
                                 <a class="dropdown-item" href="apps-chat.html"><i class="mdi mdi-message-text-outline text-muted fs-16 align-middle me-1"></i>
                                     <span class="align-middle">Messages</span></a>
@@ -279,37 +179,37 @@
                             <div class="collapse menu-dropdown" id="sidebarLanding1">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a href="../profile/profile-contact.php" class="nav-link" data-key="t-contact"> İletişim Bilgileri </a>
+                                        <a href="<?= SITE_URL . '/profile/contact' ?>" class="nav-link" data-key="t-contact"> İletişim Bilgileri </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../profile/profile-personel.php" class="nav-link" data-key="t-personel">Kişisel Bilgiler</a>
+                                        <a href="<?= SITE_URL . '/profile/persona' ?>" class="nav-link" data-key="t-personel">Kişisel Bilgiler</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../profile/profile-business.php" class="nav-link" data-key="t-business">İş Bilgileri (Mail, Web Site vb.)</a>
+                                        <a href="<?= SITE_URL . '/profile/bussiness' ?>" class="nav-link" data-key="t-business">İş Bilgileri (Mail, Web Site vb.)</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../profile/profile-socialmedia.php" class="nav-link"><span data-key="t-socialmedia">Sosyal Medya</span></a>
+                                        <a href="<?= SITE_URL . '/profile/socialmedia' ?>" class="nav-link"><span data-key="t-socialmedia">Sosyal Medya</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../profile/profile-location.php" class="nav-link"><span data-key="t-location">Konum Bilgileri</span></a>
+                                        <a href="<?= SITE_URL . '/profile/location' ?>" class="nav-link"><span data-key="t-location">Konum Bilgileri</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../profile/profile-bank.php" class="nav-link"><span data-key="t-bank">Banka Hesapları</span></a>
+                                        <a href="<?= SITE_URL . '/profile/bank' ?>" class="nav-link"><span data-key="t-bank">Banka Hesapları</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../profile/profile-file.php" class="nav-link"><span data-key="t-file">Dosya Aktarımı</span></a>
+                                        <a href="<?= SITE_URL . '/profile/file' ?>" class="nav-link"><span data-key="t-file">Dosya Aktarımı</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../profile/profile-gallery.php" class="nav-link"><span data-key="t-gallery">Galeri</span></a>
+                                        <a href="<?= SITE_URL . '/profile/gallery' ?>" class="nav-link"><span data-key="t-gallery">Galeri</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../profile/profile-hobbies.php" class="nav-link"><span data-key="t-hobbies">Hobiler</span></a>
+                                        <a href="<?= SITE_URL . '/profile/hobbies' ?>" class="nav-link"><span data-key="t-hobbies">Hobiler</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../profile/profile-licences.php" class="nav-link"><span data-key="t-licences">Lisanslar/Sertifikalar</span></a>
+                                        <a href="<?= SITE_URL . '/profile/licences' ?>" class="nav-link"><span data-key="t-licences">Lisanslar/Sertifikalar</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../profile/profile-education.php" class="nav-link"><span data-key="t-education">Eğitim Bilgisi</span></a>
+                                        <a href="<?= SITE_URL . '/profile/education' ?>" class="nav-link"><span data-key="t-education">Eğitim Bilgisi</span></a>
                                     </li>
                                 </ul>
                             </div>
