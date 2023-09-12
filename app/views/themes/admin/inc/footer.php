@@ -817,6 +817,8 @@
 <script src="<?= SITE_URL . '/' . THEME_PATH . 'admin/assets' ?>/js/pages/dashboard-ecommerce.init.js"></script>
 
 
+<script src="<?= SITE_URL . '/' . THEME_PATH . 'admin/assets' ?>/libs/cleave.js/cleave.min.js"></script>
+<script src="<?= SITE_URL . '/' . THEME_PATH . 'admin/assets' ?>/js/pages/form-masks.init.js"></script>
 
 <!-- App js -->
 <script src="<?= SITE_URL . '/' . THEME_PATH . 'admin/assets' ?>/js/app.js"></script>

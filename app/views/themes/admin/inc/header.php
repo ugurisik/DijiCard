@@ -160,7 +160,38 @@
             </div>
 
 
-
+            <?php
+            function ProfileMenuShow($link)
+            {
+                $links = ['bank', 'bussiness', 'contact', 'education', 'gallery', 'hobbies', 'licences', 'location', 'personal', 'socialmedia', 'file'];
+                if (in_array($link, $links)) {
+                    return 'collapsed active';
+                } else {
+                    return '';
+                }
+                // global $params;
+                // if ($link == $params['params'][1]) {
+                //     return 'collapsed active';
+                // } else {
+                //     return '';
+                // }
+            }
+            function ProfileMenuShowSub($link)
+            {
+                $links = ['bank', 'bussiness', 'contact', 'education', 'gallery', 'hobbies', 'licences', 'location', 'personal', 'socialmedia', 'file'];
+                if (in_array($link, $links)) {
+                    return 'show';
+                } else {
+                    return '';
+                }
+                // global $params;
+                // if ($link == $params['params'][1]) {
+                //     return 'collapsed active';
+                // } else {
+                //     return '';
+                // }
+            }
+            ?>
 
 
             <div id="scrollbar">
@@ -173,16 +204,16 @@
 
 
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="#sidebarLanding1" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLanding1">
+                            <a class="nav-link menu-link <?= ProfileMenuShow($params['params'][1]) ?>" href="#sidebarLanding1" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLanding1">
                                 <i class="ri-map-pin-user-line"></i> <span data-key="t-landing">Profil Sistemi</span>
                             </a>
-                            <div class="collapse menu-dropdown" id="sidebarLanding1">
+                            <div class="collapse menu-dropdown <?= ProfileMenuShowSub($params['params'][1]) ?>" id="sidebarLanding1">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
                                         <a href="<?= SITE_URL . '/profile/contact' ?>" class="nav-link" data-key="t-contact"> İletişim Bilgileri </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="<?= SITE_URL . '/profile/persona' ?>" class="nav-link" data-key="t-personel">Kişisel Bilgiler</a>
+                                        <a href="<?= SITE_URL . '/profile/personal' ?>" class="nav-link" data-key="t-personel">Kişisel Bilgiler</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="<?= SITE_URL . '/profile/bussiness' ?>" class="nav-link" data-key="t-business">İş Bilgileri (Mail, Web Site vb.)</a>
@@ -194,7 +225,7 @@
                                         <a href="<?= SITE_URL . '/profile/location' ?>" class="nav-link"><span data-key="t-location">Konum Bilgileri</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="<?= SITE_URL . '/profile/bank' ?>" class="nav-link"><span data-key="t-bank">Banka Hesapları</span></a>
+                                        <a href="<?= SITE_URL . '/profile/bank' ?>" class="nav-link "><span data-key="t-bank">Banka Hesapları</span></a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="<?= SITE_URL . '/profile/file' ?>" class="nav-link"><span data-key="t-file">Dosya Aktarımı</span></a>

@@ -8,3 +8,6 @@ Hata durumları için ErrorCallback yapısı oluşturmalıyım. 404 500 400 vs d
 
 
 profile-socialmedia.php Piyasada bulunan tüm sosyal medya, iş vs gibi platformların eklenmesi gerekiyor. Behance, r10, onlyfans, wp vb
+
+
+Tüm SelectBox'lar dinamik şekilde ayarlanmalı
