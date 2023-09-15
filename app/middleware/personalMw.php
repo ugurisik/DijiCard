@@ -79,7 +79,6 @@ class personalMw extends \Controller
             'DriveDocument' => $driverLicence,
             'MilitaryStatus' => $militaryStatus,
             'About' => $content,
-            'CreatedDate' => date('Y-m-d H:i:s'),
             'UpdatedDate' => date('Y-m-d H:i:s'),
         ];
         $data = $this->model('sampleModel')->updateData('profile_personal', $data, ['UserGuid' => USERGUID]);

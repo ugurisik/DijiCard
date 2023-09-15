@@ -75,9 +75,6 @@ class bussinessMw extends \Controller
         $state = $datas['state'];
         $zip = $datas['zip'];
         $data = [
-            'Guid' => $this->utils->generateGuid(),
-            'UserGuid' => USERGUID,
-            'CreatedDate' => date('Y-m-d H:i:s'),
             'UpdatedDate' => date('Y-m-d H:i:s'),
             'CompanyName' => $companyName,
             'CompanySector' => $companySector,

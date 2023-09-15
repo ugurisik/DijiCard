@@ -110,6 +110,21 @@ class profile extends Controller
     }
     public function socialmedia(...$params)
     {
-        $this->view('admin', 'socialmedia', ['params' => $params]);
+        $mw = new middleware\socialmediaMw;
+        $datas = $mw->get();
+        if (isset($params[2])) {
+            if ($params[2] == 'add') {
+                echo $mw->AddOrUpdate($_POST);
+            } elseif ($params[2] == 'delete') {
+                echo $mw->Delete($_POST);
+            } elseif ($params[2] == 'update') {
+                echo $mw->Update($_POST);
+            } else {
+                $data = $mw->get();
+                $this->view('admin', 'socialmedia', ['datas' => $datas, 'data' => $data, 'params' => $params]);
+            }
+        } else {
+            $this->view('admin', 'socialmedia', ['datas' => $datas, 'params' => $params]);
+        }
     }
 }
